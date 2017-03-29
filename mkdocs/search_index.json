@@ -101,22 +101,22 @@
             "title": "Usage"
         }, 
         {
-            "location": "/contiributors/", 
+            "location": "/contributors/", 
             "text": "Well, lets accept the fact that nothing goes well without contributors. Here is the list of people who have helped  (\n@datasploit\n) grow in its first phase. \n\n\nCore Contributors:\n\n\nFolks who took out time from busy schedule and got their hands dirty with the code:\n\n Shubham Mittal (\n@upgoingstar\n) \n\n Sudhanshu Chauhan (\n@upgoingstar\n)\n\n Kunal Aggarwal (\n@KunalAggarwal92\n)\n\n Nutan Kumar Panda (\n@nutankumarpanda\n)\n\n\nMentors:\n\n\nChaps who were generous enough to give feedback and suggest changes:\n\n Anant Srivastata (\n@anantshri\n)\n\n Prashant Mahajan (\n@prashant3535\n)\n* Shadab Siddiqui (\n@sh4ds1dd\n)\n\n\nTesters\n\n\nBelow people helped us by quickly adopting the tool and raised few naive issues we missed out:\n\n Sagar Belure (\n@sagarbelure\n)\n\n Chandrapal (\n@bnchandrapal\n)", 
             "title": "Contributors"
         }, 
         {
-            "location": "/contiributors/#core-contributors", 
+            "location": "/contributors/#core-contributors", 
             "text": "Folks who took out time from busy schedule and got their hands dirty with the code:  Shubham Mittal ( @upgoingstar )   Sudhanshu Chauhan ( @upgoingstar )  Kunal Aggarwal ( @KunalAggarwal92 )  Nutan Kumar Panda ( @nutankumarpanda )", 
             "title": "Core Contributors:"
         }, 
         {
-            "location": "/contiributors/#mentors", 
+            "location": "/contributors/#mentors", 
             "text": "Chaps who were generous enough to give feedback and suggest changes:  Anant Srivastata ( @anantshri )  Prashant Mahajan ( @prashant3535 )\n* Shadab Siddiqui ( @sh4ds1dd )", 
             "title": "Mentors:"
         }, 
         {
-            "location": "/contiributors/#testers", 
+            "location": "/contributors/#testers", 
             "text": "Below people helped us by quickly adopting the tool and raised few naive issues we missed out:  Sagar Belure ( @sagarbelure )  Chandrapal ( @bnchandrapal )", 
             "title": "Testers"
         }
