@@ -1,0 +1,129 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Welcome to the DataSploit Documentation!!!\n\n\nOverview\n\n\n\n\nPerforms automated OSINT on a domain / email / username / phone and find out relevant information from different sources. \n\n\nUseful for Pen-testers, Cyber Investigators, Product companies, defensive security professionals, etc. \n\n\nCorrelates and collaborate the results, show them in a consolidated manner. \n\n\nTries to find out credentials, api-keys, tokens, subdomains, domain history, legacy portals, etc. related to the target.\n\n\nAvailable as single consolidating tool as well as standalone scripts. \n\n\nAvailable in both GUI and Console. \n\n\n\n\nWhy DataSploit???\n\n\nIrrespective of whether you are attacking a target or defending one, you need to have a clear picture of the threat landscape before you get in. This is where DataSploit comes into the picture. Utilizing various Open Source Intelligence (OSINT) tools and techniques that we have found to be effective, DataSploit brings them all into one place, correlates the raw data captured and gives the user, all the relevant information about the domain / email / phone number / person, etc. It allows you to collect relevant information about a target which can expand your attack/defence surface very quickly. Sometimes it might even pluck the low hanging fruits for you without even touching the target and give you quick wins. Of course, a user can pick a single small job (which do not correlates obviously), or can pick up the parent search which will launch a bunch of queries, call other required scripts recursively, correlate the data and give you all juicy information in one go.\n\n\nTool Background\n\n\nCreated using our beloved Python, DataSploit simply requires the bare minimum data (such as domain name, email ID, person name, etc.) before it goes out on a mining spree. Once the data is collected, firstly the noise is removed, after which data is correlated and after multiple iterations it is stored locally in a database which could be easily visualised on the UI provided. The sources that have been integrated are all hand picked and are known to be providing reliable information. We have used them previously during different offensive as well as defensive engagements and found them helpful.\n\n\nSetup\n\n\nWorried about setup? Well, there are two major requirements here: \n\n\n\n\nSetting up the db, django, libraries, etc. We will soon have a script which will automate this for you, so can just go ahead and shoot the OSINT job. \n\n\nFeeding specific API keys for few specific sources. We are going to have a knowledge base where step by step instructions to generate these API keys will be documented. Sweet deal? \n\n\nClick here to check step by step setup guide\n\n\n\n\nRoadmap\n\n\nApart from this, in order to make it more useful in daily life of a pen-tester, we are working to make the tool as an extension of the other tools that pen-testers commonly use such as Burp Suite, Maltego etc. so that you can feel at home during the usage.", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/#welcome-to-the-datasploit-documentation", 
+            "text": "", 
+            "title": "Welcome to the DataSploit Documentation!!!"
+        }, 
+        {
+            "location": "/#overview", 
+            "text": "Performs automated OSINT on a domain / email / username / phone and find out relevant information from different sources.   Useful for Pen-testers, Cyber Investigators, Product companies, defensive security professionals, etc.   Correlates and collaborate the results, show them in a consolidated manner.   Tries to find out credentials, api-keys, tokens, subdomains, domain history, legacy portals, etc. related to the target.  Available as single consolidating tool as well as standalone scripts.   Available in both GUI and Console.", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/#why-datasploit", 
+            "text": "Irrespective of whether you are attacking a target or defending one, you need to have a clear picture of the threat landscape before you get in. This is where DataSploit comes into the picture. Utilizing various Open Source Intelligence (OSINT) tools and techniques that we have found to be effective, DataSploit brings them all into one place, correlates the raw data captured and gives the user, all the relevant information about the domain / email / phone number / person, etc. It allows you to collect relevant information about a target which can expand your attack/defence surface very quickly. Sometimes it might even pluck the low hanging fruits for you without even touching the target and give you quick wins. Of course, a user can pick a single small job (which do not correlates obviously), or can pick up the parent search which will launch a bunch of queries, call other required scripts recursively, correlate the data and give you all juicy information in one go.", 
+            "title": "Why DataSploit???"
+        }, 
+        {
+            "location": "/#tool-background", 
+            "text": "Created using our beloved Python, DataSploit simply requires the bare minimum data (such as domain name, email ID, person name, etc.) before it goes out on a mining spree. Once the data is collected, firstly the noise is removed, after which data is correlated and after multiple iterations it is stored locally in a database which could be easily visualised on the UI provided. The sources that have been integrated are all hand picked and are known to be providing reliable information. We have used them previously during different offensive as well as defensive engagements and found them helpful.", 
+            "title": "Tool Background"
+        }, 
+        {
+            "location": "/#setup", 
+            "text": "Worried about setup? Well, there are two major requirements here:    Setting up the db, django, libraries, etc. We will soon have a script which will automate this for you, so can just go ahead and shoot the OSINT job.   Feeding specific API keys for few specific sources. We are going to have a knowledge base where step by step instructions to generate these API keys will be documented. Sweet deal?   Click here to check step by step setup guide", 
+            "title": "Setup"
+        }, 
+        {
+            "location": "/#roadmap", 
+            "text": "Apart from this, in order to make it more useful in daily life of a pen-tester, we are working to make the tool as an extension of the other tools that pen-testers commonly use such as Burp Suite, Maltego etc. so that you can feel at home during the usage.", 
+            "title": "Roadmap"
+        }, 
+        {
+            "location": "/setupGuide/", 
+            "text": "This page holds the setup guide you will need before kicking off the datasploit in your system. Please note that all the documentation is as per *nix machines, and the tool has not been thoroughly tested on Windows platform. If you would like to volunteer for the same, give us a shout at helpme@datasploit.info. Following are the quick steps to get you going:\n\n\nIf you want to work with web gui, follow the steps till 7. Otherwise, follow till 5th and you should be good to go. \n\n\nStep 1 - Download DataSploit to your system.\n\n\nYou can either use the git command line tools using the following command:\n\n\ngit clone https://github.com/upgoingstar/datasploit.git\n\n\n\n\n, or you can simply download the zip file \n(\nlink\n)\n and extract the same using unzip.\n\n\nunzip master.zip\n\n\n\n\nStep 2: Install python dependencies\n\n\nGo into the tool directory and install all the python libraries using the requirements.txt file. In case you encounter 'Permission Denied' error, use sudo.\n\n\ncd master\npip install -r requirements.txt\n\n\n\n\nStep 3: Rename config_sample.py to config.py\n\n\nPlease make sure that config.py is added in your gitIgnore file so that this is not commited in any case. We care for your data too, and hence this tip. :) \n\n\nmv config_sample.py config.py\n\n\n\n\nStep 4: Generate API Keys and paste inside config.py\n\n\nGenerate API keys using the \napi Key Generation\n guide at \n\n\n\n\nhttp://datasploit.readthedocs.io/en/latest/apiGeneration/ \n\n\n\n\nand enter the respective values in config.py file. Leave all other key value pairs blank.\n\n\nCongratulations, you are now good to go. Lets go ahead and run our automated script for OSINT on a domain. \n\n\npython domainOsint.py \ndomain_name", 
+            "title": "Setting up the Environment"
+        }, 
+        {
+            "location": "/setupGuide/#step-1-download-datasploit-to-your-system", 
+            "text": "You can either use the git command line tools using the following command:  git clone https://github.com/upgoingstar/datasploit.git  , or you can simply download the zip file  ( link )  and extract the same using unzip.  unzip master.zip", 
+            "title": "Step 1 - Download DataSploit to your system."
+        }, 
+        {
+            "location": "/setupGuide/#step-2-install-python-dependencies", 
+            "text": "Go into the tool directory and install all the python libraries using the requirements.txt file. In case you encounter 'Permission Denied' error, use sudo.  cd master\npip install -r requirements.txt", 
+            "title": "Step 2: Install python dependencies"
+        }, 
+        {
+            "location": "/setupGuide/#step-3-rename-config_samplepy-to-configpy", 
+            "text": "Please make sure that config.py is added in your gitIgnore file so that this is not commited in any case. We care for your data too, and hence this tip. :)   mv config_sample.py config.py", 
+            "title": "Step 3: Rename config_sample.py to config.py"
+        }, 
+        {
+            "location": "/setupGuide/#step-4-generate-api-keys-and-paste-inside-configpy", 
+            "text": "Generate API keys using the  api Key Generation  guide at    http://datasploit.readthedocs.io/en/latest/apiGeneration/    and enter the respective values in config.py file. Leave all other key value pairs blank.  Congratulations, you are now good to go. Lets go ahead and run our automated script for OSINT on a domain.   python domainOsint.py  domain_name", 
+            "title": "Step 4: Generate API Keys and paste inside config.py"
+        }, 
+        {
+            "location": "/apiGeneration/", 
+            "text": "We need following API keys to run this tool efficiently.\n- shodan_api\n- censysio_id\n- censysio_secret\n- zoomeyeuser\n- zoomeyepass\n- clearbit_apikey\n- emailhunter\n- fullcontact\n- google_cse_key\n- google_cse_cx\n\n\nShodan_api\n\n\n\n\nRegister\n an account in shodan.\n\n\nVisit your registered email id and activate the account.\n\n\nLogin\n to your account and you will find the API keys under profile overview tab.\n\n\nCopy the API key and this is the value for \nshodan_api\n field in the config.py file. \n\n\n\n\nCensysio ID and Secret\n\n\n\n\nRegister\n an account in censysio.\n\n\nVisit your registered email id and activate the account.\n\n\nLogin\n to your account.\n\n\nVisit \nAccount\n tab to get API ID and Secret.\n\n\nYour API key is the value for \ncensysio_id\n field and API Secret is the value for \ncensysio_secret\n field in config.py file.\n\n\n\n\nClearbit API\n\n\n\n\nRegister\n an account in clearbit.\n\n\nIt will auto redirect to the account.\n\n\nVisit \nAPI keys\n tab to get API key.\n\n\nCopy the API key and this is the value for \nclearbit_apikey\n field in the config.py file. \n\n\n\n\nEmailhunter API\n\n\n\n\nRegister\n an account in emailhunter.\n\n\nClick on activation link send to your registered email address and it will auto redirect to the account.\n\n\nVisit \nAPI keys\n tab to get API key.\n\n\nCopy the API key and this is the value for \nemailhunter\n field in the config.py file. \n\n\n\n\nFullcontact API\n\n\n\n\nRegister\n an account in fullcontact.\n\n\nLogin\n.\n\n\nIt will ask for mobile number verification, complete that.\n\n\nYou will be redirected to the page where you can get the API key.\n\n\nAdditionally you will also get one email in the registered email id with API details.\n\n\nCopy the API key and this is the value for \nfullcontact_api\n field in the config.py file. \n\n\n\n\nGoogle Custom Search Engine API key and CX id\n\n\n\n\nGo to https://console.developers.google.com/ \n Credentials\n\n\nClick on 'Create Credentials' and select API key. \n\n\nClick on restrict key. \n\n\nSelect HTTP Headers (Websites) radio button.\n\n\nAdd *\n.datasploit.info/*\n in restrictions. This is done in order to stop unintentional usage of your api key. \n\n\nCopy the API key and click on save button. This is the value for \ngoogle_cse_key\n field in the config.py file. \n\n\nGo to https://cse.google.com/cse/all, Click on Add button. \n\n\nIn sites to search box, enter \"pastebin.com\" and \"pastie.org\"\n\n\nGive any name to your search engine and click on Create button. \n\n\nGo to https://cse.google.com/cse/all again and click on the search engine you just created. \n\n\nClick on the 'Search engine id' button and copy your search engine id. This is the value for \ngoogle_cse_cx\n field in config.py file.\n\n\n\n\nZoomeye Username and Password\n\n\n\n\nRegister\n an user with zoomeye and use the credentials for this tool. (Don't worry if you are redirected to sso.telnet404.com. \nThis is how it works.)\n\n\nName of fields in the signup form -  \n1. email, 2. username, 3. nickname, 4. password, 5. confirm_password, 6. captcha\n\n\nOnce you fill out the details it will redirect you to the account page.\n\n\nThere you will found something: \n(Status: Inactive. Activate Now)\n\n\nClick on activate now and two fileds will be populated.\n\n\nThe first field will be captcha and the second one will be email id.\n\n\nOnce you fill the email id in the second text box, click on send activation code.\n\n\nCheck the activation code your email account.\n\n\nPut this activation code in the email id text box and click on determine.\n\n\nNow your account is activated and use those credentials in the tool.\n\n\nEmail ID which you have used to sign up is your username and is the value for \nzoomeyeuser\n field in config.py\n\n\nYour account password is the value for \nzoomeyepass\n field in the config.py", 
+            "title": "How to Generate Api Keys"
+        }, 
+        {
+            "location": "/apiGeneration/#shodan_api", 
+            "text": "Register  an account in shodan.  Visit your registered email id and activate the account.  Login  to your account and you will find the API keys under profile overview tab.  Copy the API key and this is the value for  shodan_api  field in the config.py file.", 
+            "title": "Shodan_api"
+        }, 
+        {
+            "location": "/apiGeneration/#censysio-id-and-secret", 
+            "text": "Register  an account in censysio.  Visit your registered email id and activate the account.  Login  to your account.  Visit  Account  tab to get API ID and Secret.  Your API key is the value for  censysio_id  field and API Secret is the value for  censysio_secret  field in config.py file.", 
+            "title": "Censysio ID and Secret"
+        }, 
+        {
+            "location": "/apiGeneration/#clearbit-api", 
+            "text": "Register  an account in clearbit.  It will auto redirect to the account.  Visit  API keys  tab to get API key.  Copy the API key and this is the value for  clearbit_apikey  field in the config.py file.", 
+            "title": "Clearbit API"
+        }, 
+        {
+            "location": "/apiGeneration/#emailhunter-api", 
+            "text": "Register  an account in emailhunter.  Click on activation link send to your registered email address and it will auto redirect to the account.  Visit  API keys  tab to get API key.  Copy the API key and this is the value for  emailhunter  field in the config.py file.", 
+            "title": "Emailhunter API"
+        }, 
+        {
+            "location": "/apiGeneration/#fullcontact-api", 
+            "text": "Register  an account in fullcontact.  Login .  It will ask for mobile number verification, complete that.  You will be redirected to the page where you can get the API key.  Additionally you will also get one email in the registered email id with API details.  Copy the API key and this is the value for  fullcontact_api  field in the config.py file.", 
+            "title": "Fullcontact API"
+        }, 
+        {
+            "location": "/apiGeneration/#google-custom-search-engine-api-key-and-cx-id", 
+            "text": "Go to https://console.developers.google.com/   Credentials  Click on 'Create Credentials' and select API key.   Click on restrict key.   Select HTTP Headers (Websites) radio button.  Add * .datasploit.info/*  in restrictions. This is done in order to stop unintentional usage of your api key.   Copy the API key and click on save button. This is the value for  google_cse_key  field in the config.py file.   Go to https://cse.google.com/cse/all, Click on Add button.   In sites to search box, enter \"pastebin.com\" and \"pastie.org\"  Give any name to your search engine and click on Create button.   Go to https://cse.google.com/cse/all again and click on the search engine you just created.   Click on the 'Search engine id' button and copy your search engine id. This is the value for  google_cse_cx  field in config.py file.", 
+            "title": "Google Custom Search Engine API key and CX id"
+        }, 
+        {
+            "location": "/apiGeneration/#zoomeye-username-and-password", 
+            "text": "Register  an user with zoomeye and use the credentials for this tool. (Don't worry if you are redirected to sso.telnet404.com.  This is how it works.)  Name of fields in the signup form -   1. email, 2. username, 3. nickname, 4. password, 5. confirm_password, 6. captcha  Once you fill out the details it will redirect you to the account page.  There you will found something:  (Status: Inactive. Activate Now)  Click on activate now and two fileds will be populated.  The first field will be captcha and the second one will be email id.  Once you fill the email id in the second text box, click on send activation code.  Check the activation code your email account.  Put this activation code in the email id text box and click on determine.  Now your account is activated and use those credentials in the tool.  Email ID which you have used to sign up is your username and is the value for  zoomeyeuser  field in config.py  Your account password is the value for  zoomeyepass  field in the config.py", 
+            "title": "Zoomeye Username and Password"
+        }, 
+        {
+            "location": "/Usage/", 
+            "text": "Datasploit allows you to perform OSINT on a domain_name, email_id, username and phoneNumber. In order to launch any script, lets first understand the nomenclature of these scripts:\n\n\n\n\nAll the scripts meant to perform osint on domain starts with the keyword \n'domain_'\n. Eg. domain_subdomains, domain_whois, etc. In similar manner, scripts for osint on email_id starts with \n'email_'\n, eg. email_fullcontact. \n\n\nScripts with an \nunderscore\n are standalone scripts and collects data of one specific kind. \n\n\nScripts without an underscore are the ones used for automated collection of data using standalone scripts. Eg. domainOsint.py\n\n\n\n\nIn order to run any script, pass the respective argument. For example, domainOsint and domain_subdomains.py will expect a domain name to be passed.\n\n\npython domainOsint.py example.com\npython domain_subdomains.py example.com\n\n\n\n\nWhile, domainOsint will call all other domain_* scripts and list down data as well as dump the same in mongoDb, domain_subdomains and other such scripts will just list down data specific to their function. \n\n\nPlease note that, standalone scripts do not dump data into the database.", 
+            "title": "Usage"
+        }, 
+        {
+            "location": "/contiributors/", 
+            "text": "Well, lets accept the fact that nothing goes well without contributors. Here is the list of people who have helped  (\n@datasploit\n) grow in its first phase. \n\n\nCore Contributors:\n\n\nFolks who took out time from busy schedule and got their hands dirty with the code.\n\n Shubham Mittal (\n@upgoingstar\n)\n\n Sudhanshu Chauhan (\n@upgoingstar\n)\n\n Kunal Aggarwal (\n@KunalAggarwal92\n)\n\n Nutan Kumar Panda (\n@nutankumarpanda\n)\n\n\nMentors:\n\n\nChaps who were generous enough to give feedback and suggest changes. Kudos to you guys. \n\n Anant Srivastata (\n@anantshri\n)\n\n Prashant Mahajan (\n@prashant3535\n)\n\n Shadab Siddiqui (\n@sh4ds1dd\n)\n\n Chandrapal (\n@bnchandrapal\n)\n\n\nTesters\n\n\nBelow people helped us by quickly adopting the tool and raised few naive issues we missed out. Kudos to you guys too. \n\n Sagar Belure (\n@sagarbelure\n)\n\n Chandrapal (\n@bnchandrapal\n)", 
+            "title": "Contributors"
+        }, 
+        {
+            "location": "/contiributors/#core-contributors", 
+            "text": "Folks who took out time from busy schedule and got their hands dirty with the code.  Shubham Mittal ( @upgoingstar )  Sudhanshu Chauhan ( @upgoingstar )  Kunal Aggarwal ( @KunalAggarwal92 )  Nutan Kumar Panda ( @nutankumarpanda )", 
+            "title": "Core Contributors:"
+        }, 
+        {
+            "location": "/contiributors/#mentors", 
+            "text": "Chaps who were generous enough to give feedback and suggest changes. Kudos to you guys.   Anant Srivastata ( @anantshri )  Prashant Mahajan ( @prashant3535 )  Shadab Siddiqui ( @sh4ds1dd )  Chandrapal ( @bnchandrapal )", 
+            "title": "Mentors:"
+        }, 
+        {
+            "location": "/contiributors/#testers", 
+            "text": "Below people helped us by quickly adopting the tool and raised few naive issues we missed out. Kudos to you guys too.   Sagar Belure ( @sagarbelure )  Chandrapal ( @bnchandrapal )", 
+            "title": "Testers"
+        }
+    ]
+}
